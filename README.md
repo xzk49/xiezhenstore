@@ -1,17 +1,24 @@
-# xiezhenstore
-xiezhenstore is a fork for sidestore 
-蛤蟆助手是一个无限制、社区驱动的替代appstore，适用于非越狱iOS设备，蛤蟆助手是来自于sidestore和altstore的分支
-[！[许可证：AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg）](https://www.gnu.org/licenses/agpl-3.0)
-[！[PR welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
-[！[生成并上载SideStore](https://github.com/SideStore/SideStore/actions/workflows/build.yml/badge.svg)](https://github.com/SideStore/SideStore/actions/workflows/build.yml)
-蛤蟆助手（SideStore）是一款iOS应用程序，允许您仅使用Apple ID将应用程序加载到iOS设备上。SideStore使用您的个人开发证书安装应用程序，然后使用[专门设计的VPN](https://github.com/jkcoxson/Secret-Tunnel)以欺骗iOS安装它们。SideStore将定期在后台“刷新”您的应用程序，以防止其正常的7天开发期到期。
-蛤蟆助手（SideStore）的目标是提供无限制的侧加载体验。这是[AltStore]的社区驱动分支(https://github.com/rileytestut/AltStore)，并且已经实现了社区最需要的一些功能。
-（欢迎投稿！🙂)
-## 编译要求
--Xcode 14
--iOS 14+
--Rustup（“brew install Rustup”）
-为什么选择iOS 14？针对这样一个最新版本的iOS，我们可以加快开发速度，尤其是因为没有多少开发人员可以在较旧的设备上进行测试。SwiftUI支持要好得多，这一事实证明了这一点，使我们可以转换为更现代的UI代码库。
+# SideStore
+
+> SideStore is an *untethered, community driven* alternative app store for non-jailbroken iOS devices
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
+[![Build and Upload SideStore](https://github.com/SideStore/SideStore/actions/workflows/build.yml/badge.svg)](https://github.com/SideStore/SideStore/actions/workflows/build.yml)
+
+SideStore is an iOS application that allows you to sideload apps onto your iOS device with just your Apple ID. SideStore resigns apps with your personal development certificate, and then uses a [specially designed VPN](https://github.com/jkcoxson/Secret-Tunnel) in order to trick iOS into installing them. SideStore will periodically "refresh" your apps in the background, to keep their normal 7-day development period from expiring.
+
+SideStore's goal is to provide an untethered sideloading experience. It's a community driven fork of [AltStore](https://github.com/rileytestut/AltStore), and has already implemented some of the community's most-requested features.
+
+(Contributions are welcome! 🙂)
+
+
+## Requirements
+- Xcode 14
+- iOS 14+
+- Rustup (`brew install rustup`)
+
+Why iOS 14? Targeting such a recent version of iOS allows us to accelerate development, especially since not many developers have older devices to test on. This is corrobated by the fact that SwiftUI support is much better, allowing us to transistion to a more modern UI codebase.
 ## Project Overview
 
 ### SideStore
@@ -43,5 +50,7 @@ SideStore is fairly straightforward to compile and run if you're already an iOS 
 6. Fill out all of the properties in `CodeSigning.xcconfig` to match your account.
 7. In `Shared/Extensions/Bundle+AltStore.swift`, replace "group.com.rileytestut.AltStore" with your own App Group ID. 
 8. Build + run app! 🎉
-##许可
-此项目根据AGPLv3许可证获得许可。
+
+## Licensing
+
+This project is licensed under the **AGPLv3 license**.
